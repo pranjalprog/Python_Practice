@@ -1,49 +1,42 @@
-# Objects Types / Data Types 
--Numbers : 1234, 3.1415, 3+4j, 0b111, Decimal(), Fraction()
-- Strings : 'spam', "Bob's", b'a/x01c', u'sp\xc4m'
-- Lists :  [1, [2, 'three'], 4.5], lists(range(10))
-- Tuple : (1, 'spam', 4, 'U'), tuple('spam') , namedtuple
+# Python Data Types, Built-ins, & Libraries Reference
 
-[backet], (paranthesis), {curlybraces}
-- Dictonaries : {
-    'food' : 'spam'
-    'taste' : 'yum'  
-} - isme indexing 0 se start nahi hoti hai 
+### Object Types / Data Types
 
-- Set : set('abc') ,{'a','b','c'}
-- File : open('eggs.txt'), open(r'C:\ham.bin','wb')
-- Boolean : True, false
-- None : None
-- Functions , modules, classes
+* **Numbers**: `1234`, `3.1415`, `3+4j`, `0b111`, `Decimal()`, `Fraction()`
+* **Strings**: `'spam'`, `"Bob's"`, `b'a\x01c'`, `u'sp\xc4m'`
+* **Lists**: `[1, [2, 'three'], 4.5]`, `list(range(10))`
+* **Tuple**: `(1, 'spam', 4, 'U')`, `tuple('spam')`, `namedtuple`
+* **Brackets / Notation Guide**: `[]` (brackets/lists), `()` (parentheses/tuples), `{}` (curly braces/sets & dictionaries)
+* **Dictionaries**: `{'food': 'spam', 'taste': 'yum'}` (indexing does not start from 0)
+* **Set**: `set('abc')`, `{'a', 'b', 'c'}`
+* **File**: `open('eggs.txt')`, `open(r'C:\ham.bin', 'wb')`
+* **Boolean**: `True`, `False`
+* **None**: `None`
+* **Other**: Functions, modules, classes
+* **Advanced Types**: Decorators, generators, iterators, metaprogramming
 
--Advances : Types -> Decorators, generators ,Iterators, MetaProgramming
+---
 
+### List Copying Example (Slicing)
 
+```python
+h1 = [1, 2, 3]
+h2 = h1[:]  # Creates a shallow copy
+h1[0] = 55  # Modifying h1 does not affect h2
+# h1 -> [55, 2, 3]
+# h2 -> [1, 2, 3]
 
-h1 = [1,2,3]
->>> h2 = h1[:]
->>> h1
-[1, 2, 3]
->>> h2
-[1, 2, 3]
->>> h1[0]
-1
->>> h1[0] = 55
->>> h1
-[55, 2, 3]
->>> h2
-[1, 2, 3]
->>> 
+```
 
+---
 
+### Object Representation & Output Functions
 
-repr() -> returns the official, unambiguous string representation of an object (often valid Python code to recreate it)
+* **`repr()`**: Returns the official, unambiguous string representation of an object (often valid Python code to recreate it).
+* **`str()`**: Returns a user-friendly, informal string representation meant for readability.
+* **`print()`**: Outputs the rendered text directly to the console.
 
-str() -> returns a user-friendly, informal string representation meant for readability
-
-print() -> outputs the rendered text directly to the console
-
-
+---
 
 ### Python Number Functions
 
@@ -64,6 +57,8 @@ print() -> outputs the rendered text directly to the console
 
 
 
+---
+
 ### Other Python Number & Math Libraries
 
 * **`statistics`**: Statistical calculations (mean, median, mode, standard deviation).
@@ -80,6 +75,10 @@ print() -> outputs the rendered text directly to the console
 
 * **`cmath`**: Mathematical functions for complex numbers.
 * *Example:* `cmath.sqrt(-1) -> 1j`
+
+
+
+---
 
 ### Python String Methods & Libraries
 
@@ -102,8 +101,6 @@ print() -> outputs the rendered text directly to the console
 
 
 
----
-
 #### 2. String & Text Libraries
 
 * **`string` Module**: Provides useful string constants.
@@ -112,4 +109,3 @@ print() -> outputs the rendered text directly to the console
 
 * **`re` Module (Regular Expressions)**: For advanced pattern matching and text searching.
 * *Example:* `re.findall(r'\d+', 'Order 45, items 12')` $\rightarrow$ `['45', '12']`
-
